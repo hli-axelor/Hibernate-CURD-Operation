@@ -1,0 +1,11 @@
+
+<hibernate-mapping>
+    <class name="com.entity.Product" table="product">
+        <id name="pId" column="pId"></id>
+        
+        <property name="pName" column="pName"/>
+        <property name="srs" column="series_name"/>
+        <property name="price" column="price"/>
+        <property name="stock" column="stock"/>
+    </class>
+</hibernate-mapping>
