@@ -21,18 +21,19 @@ public class App {
         Session session = factory.openSession();
         //entity
         
-        Product product = new Product();
-        product.setpId(id);
-        product.setpName("RTX 4060");
-        product.setPrice(140000);
-        product.setSrs("5000");
-        product.setStock(5);
+         Product product = session.get(Product.class, 4);
+//        product.setpId(id);
+//        product.setpName("RTX 4060");
+//        product.setPrice(140000);
+//        product.setSrs("5000");
+//        product.setStock(5);
 //        session.save(product);
         
+         product.setpName("yash");
         try {
         	
         	tx = session.beginTransaction();
-        	session.save(product);
+        	session.update(product);
         	tx.commit();
         }catch(HibernateException e) {
         	e.toString();
